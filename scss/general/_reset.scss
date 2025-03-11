@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Overpass", sans-serif;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url(../imagenes/mediasAdidas.png);
+  background-repeat: repeat;
+  background-image: contain;
+}
+
+main {
+  padding: 20px;
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    .producto {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      height: 60vh;
+      img {
+        min-width: 300px;
+        max-width: 100%;
+        border-radius: 200px 0 200px 0 ;
+        height: 40vh;
+      }
+      h3 {
+        font-size: 1.6em;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 0.9em;
+        color: #555;
+        margin-bottom: 10px;
+      }
+      .precio {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+}
+
+/* Estilos del nav */
+nav {
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #0a0a0a;
+  padding: 10px 20px;
+}
+
+/* Estilos del menú */
+.menu {
+  justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+  gap: 20px; /* Espacio entre elementos del menú */
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+  a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: static;
+    height: 30vh;
+    ul{
+      display: flex;
+      li{
+        width: 100%;
+        a{
+          
+        }
+      }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+      h1{
+        text-transform: uppercase;
+        font-size: 30px;
+        background-color: whitesmoke;
+        border-radius: 100px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        font-weight: 300;
+      }
+      p{
+        position: relative;
+        bottom: 50px
+      }
+      ;
+    }
+
+    .menu {
+      justify-content: center; /* Centra el menú en móviles */
+      flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan */
+      width: 50%;
+    }
+  }
+}
