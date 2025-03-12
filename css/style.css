@@ -14,9 +14,6 @@ body {
   font-family: "Overpass", sans-serif;
   padding: 0;
   background-color: #f4f4f4;
-  background-image: url(../imagenes/mediasAdidas.png);
-  background-repeat: repeat;
-  background-image: contain;
 }
 
 main {
@@ -35,25 +32,27 @@ main .productos-grid .producto {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 60vh;
+  height: 70vh;
 }
 main .productos-grid .producto img {
   min-width: 300px;
   max-width: 100%;
-  border-radius: 200px 0 200px 0;
+  border-radius: 100px 0 100px 0;
   height: 40vh;
+  padding: 0 20px 20px 20px;
 }
 main .productos-grid .producto h3 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin: 10px 0;
 }
 main .productos-grid .producto p {
   font-size: 0.9em;
   color: #555;
   margin-bottom: 10px;
+  padding: 0 50px;
 }
 main .productos-grid .producto .precio {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   color: #000;
 }
@@ -63,75 +62,126 @@ nav {
   align-items: center; /* Centra verticalmente los elementos */
   background-color: #0a0a0a;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  position: static;
+  height: 30vh;
 }
-
-/* Estilos del menú */
-.menu {
-  justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+nav .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+}
+nav .logo h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  background-color: whitesmoke;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  font-weight: 300;
+}
+nav .logo p {
+  position: relative;
+  bottom: 50px;
+}
+nav .menu {
+  justify-content: center; /* Centra el menú en móviles */
+  flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan */
+  width: 50%;
   gap: 20px; /* Espacio entre elementos del menú */
   list-style: none; /* Quita los puntos de la lista */
   margin: 0;
   padding: 0;
+  display: flex;
 }
-.menu li {
+nav .menu li {
   display: inline-block;
+  width: 100%;
 }
-.menu a {
+nav .menu a {
   color: white;
   text-decoration: none;
   font-size: 1.1em;
   padding: 5px 10px;
   transition: background-color 0.3s ease;
 }
-.menu a:hover {
+nav .menu a:hover {
   background-color: #555;
   border-radius: 5px;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  nav {
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer div a {
+  color: #f4f4f4;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  padding: 15px 15px 60px 15px;
+  border-radius: 50px 50px 0 0;
+  font-size: 20px;
+}
+footer div a p {
+  position: relative;
+  top: 30px;
+}
+footer div a:hover {
+  color: #f4f4f4;
+  background-color: #555;
+}
+
+@media (min-width: 750px) {
+  body nav {
+    gap: 40px;
+  }
+  body nav .menu {
     display: flex;
     flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    position: static;
-    height: 30vh;
-  }
-  nav ul {
-    display: flex;
-  }
-  nav ul li {
     width: 100%;
   }
-  nav .logo {
+  body nav .menu li {
+    width: 20%;
+  }
+  body nav .menu li a {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1100px) {
+  body nav {
+    padding-top: 50px;
+    gap: 40px;
+    height: 25vh;
+  }
+  body nav .logo {
+    padding-left: 20px;
+    width: 200px;
+  }
+  body nav .logo h1 {
+    border-radius: 200px;
+  }
+  body nav .menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-  }
-  nav .logo h1 {
-    text-transform: uppercase;
-    font-size: 30px;
-    background-color: whitesmoke;
-    border-radius: 100px;
+    flex-direction: row;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    align-content: center;
-    font-weight: 300;
+    gap: 0;
   }
-  nav .logo p {
-    position: relative;
-    bottom: 50px;
+  body nav .menu li {
+    width: 20%;
   }
-  nav .menu {
-    justify-content: center; /* Centra el menú en móviles */
-    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan */
-    width: 50%;
+  body nav .menu li a {
+    font-size: 2.5em;
   }
 }
 
