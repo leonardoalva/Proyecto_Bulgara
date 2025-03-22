@@ -19,6 +19,9 @@ body {
 main {
   padding: 20px;
 }
+main .contactosCard {
+  gap: 20px;
+}
 main .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -160,13 +163,14 @@ footer div a:hover {
 }
 @media (min-width: 1100px) {
   body nav {
-    padding-top: 50px;
+    padding: 50px 0 10px 0;
     gap: 40px;
-    height: 25vh;
+    height: 20vh;
   }
   body nav .logo {
     padding-left: 20px;
-    width: 200px;
+    padding-bottom: 10px;
+    width: 160px;
   }
   body nav .logo h1 {
     border-radius: 200px;
