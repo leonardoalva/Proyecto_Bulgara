@@ -10,12 +10,16 @@
       .menu {
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         width: 100%;
+        ul{
+          width: 100%;
           li {
-            width: 20%;
+            width: 100%;
             a{
                 font-size: 1.3em;
             }
+          }
           }
         }
       }

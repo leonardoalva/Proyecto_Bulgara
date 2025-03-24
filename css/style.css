@@ -98,7 +98,6 @@ nav .logo p {
 nav .menu {
   justify-content: center; /* Centra el menú en móviles */
   flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan */
-  width: 50%;
   gap: 20px; /* Espacio entre elementos del menú */
   list-style: none; /* Quita los puntos de la lista */
   margin: 0;
@@ -154,12 +153,16 @@ footer div a:hover {
   body nav .menu {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
   }
-  body nav .menu li {
-    width: 20%;
+  body nav .menu ul {
+    width: 100%;
   }
-  body nav .menu li a {
+  body nav .menu ul li {
+    width: 100%;
+  }
+  body nav .menu ul li a {
     font-size: 1.3em;
   }
 }
@@ -181,13 +184,17 @@ footer div a:hover {
   body nav .menu {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
     gap: 0;
   }
-  body nav .menu li {
-    width: 20%;
+  body nav .menu ul {
+    width: 100%;
   }
-  body nav .menu li a {
+  body nav .menu ul li {
+    width: initial;
+  }
+  body nav .menu ul li a {
     font-size: 2.5em;
   }
 }
