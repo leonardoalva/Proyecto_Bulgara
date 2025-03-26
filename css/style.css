@@ -17,9 +17,10 @@ body {
 }
 
 main {
+  height: 70vh;
   padding: 20px;
 }
-main .tituloProductos {
+main .tituloEnvios {
   align-items: center;
   text-align: center;
   padding-bottom: 20px;
@@ -80,22 +81,31 @@ nav .logo {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 60%;
   border: 1px solid #f4f4f4;
+  background-color: #f4f4f4;
+  border-radius: 150px;
+  min-width: 150px;
+  min-height: 150px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 nav .logo h1 {
+  position: relative;
+  top: 20px;
   text-transform: uppercase;
   font-size: 30px;
-  border-radius: 100px;
-  height: 170px;
+  height: 100%;
   text-align: center;
   align-content: center;
-  font-weight: 300;
-  color: #f4f4f4;
+  font-weight: 500;
+  color: #0a0a0a;
 }
 nav .logo p {
-  color: #f4f4f4;
+  color: #0a0a0a;
+  position: relative;
+  top: 10px;
+  font-weight: 500;
 }
 nav .menu {
   justify-content: center; /* Centra el menú en móviles */
@@ -116,6 +126,7 @@ nav .menu a {
   font-size: 1.1em;
   padding: 5px 10px;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 nav .menu a:hover {
   background-color: #555;
